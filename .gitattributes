@@ -1,0 +1,9 @@
+﻿* text=auto eol=lf
+*.py text diff=python
+*.md text diff=markdown
+*.toml text
+*.png binary
+*.jpg binary
+*.moc3 binary
+*.wav binary
+docs/** linguist-documentation

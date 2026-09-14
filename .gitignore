@@ -1,0 +1,35 @@
+﻿# 构建产物
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+
+# 测试 / 缓存
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 模型素材：版权归各自权利人，不入库
+*.moc3
+*.model3.json
+*.physics3.json
+*.pose3.json
+*.cdi3.json
+*.motion3.json
+*.exp3.json
+live2d模型/
+models/
+*.wav
+*.m4a
+
+# 运行时
+_tmp*
+*.log
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyqt-live2d-bridge"
+version = "0.1.0"
+description = "在 PyQt5 里渲染 Live2D Cubism 模型，并做动作 / 表情 / 情绪绑定（Live2D Cubism rendering and motion binding for PyQt5）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["live2d", "cubism", "pyqt5", "qt", "desktop-pet", "opengl"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+# 运行依赖
+#   PyQt5       —— Qt 宿主窗口
+#   live2d-py   —— Live2D Cubism Native 的 Python 绑定（第三方封装）
+#   pyopengl    —— live2d-py 的 GL 依赖
+dependencies = [
+    "PyQt5>=5.15",
+    "live2d-py>=0.7.0.4",
+    "pyopengl>=3.1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/canyueY/pyqt-live2d-bridge"
+Repository = "https://github.com/canyueY/pyqt-live2d-bridge"
+Issues = "https://github.com/canyueY/pyqt-live2d-bridge/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["live2d_bridge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
